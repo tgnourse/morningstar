@@ -319,7 +319,7 @@ function ajaxget(M, H, D, G, F) {
     if (!F) {
         E = I.responseText
     }
-    console.log("Response: " + E);
+    // console.log("Response: " + E);
     return E
 }
 ;
@@ -350,11 +350,11 @@ var ChStDisp = new EnumTextDisplayClass(MBID, 50, 1, "fDChSt", "lblSt", "Charge 
 var TStamp = new TStampClass("flastU", "valLastU");
 var intervalHandle = 0;
 
-console.log(Vb);
-console.log(Vb.updateLVText());
+LVInit();
+Vb.updateLVText();
 
 function LVInit() {
-    ShowMenu();
+    // ShowMenu();
     Factors.Init();
     rowsToUpdate[rowsToUpdate.length] = Vb;
     rowsToUpdate[rowsToUpdate.length] = Ib;
@@ -373,7 +373,7 @@ function LVInit() {
     rowsToUpdate[rowsToUpdate.length] = AlarmsDisplay;
     rowsToUpdate[rowsToUpdate.length] = FaultsDisplay;
     rowsToUpdate[rowsToUpdate.length] = TStamp;
-    intervalHandle = setInterval(updateAllLVText, 100)
+    // intervalHandle = setInterval(updateAllLVText, 100)
 }
 
 function BitFieldTextDisplayClass(I, D, B, E, C, F, G, H, A) {
@@ -393,7 +393,7 @@ function BitFieldTextDisplayClass(I, D, B, E, C, F, G, H, A) {
                 L = (J[0] * (65536)) + J[1]
             }
             L = L & (~E);
-            console.log(this.lblName.toString());
+            // console.log(this.lblName.toString());
             var N = "";
             var K = 0;
             if (L > 0) {
@@ -411,7 +411,7 @@ function BitFieldTextDisplayClass(I, D, B, E, C, F, G, H, A) {
             } else {
                 N = "None"
             }
-            console.log(N);
+            // console.log(N);
             return 1
         } catch (M) {
             return 0
@@ -435,9 +435,9 @@ function EnumTextDisplayClass(B, C, G, F, D, H, A, E) {
                 var I = J.split("#");
                 J = (parseInt(I[0]) * 65536) + parseInt(I[1])
             }
-            console.log(this.lblName.toString());
+            // console.log(this.lblName.toString());
             if (this.textArray.length > J) {
-                console.log(this.textArray[J]);
+                // console.log(this.textArray[J]);
             }
             return 1
         } catch (K) {
@@ -473,7 +473,7 @@ function TStampClass(B, A) {
     this.updateLVText = function () {
         try {
             var D = new Date();
-            console.log("Last Update: " + D.toUTCString());
+            // console.log("Last Update: " + D.toUTCString());
             return 1
         } catch (C) {
             return 0
