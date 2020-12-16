@@ -1,0 +1,13 @@
+{
+  "name": "morningstar",
+  "version": "0.0.1",
+  "dependencies": {
+    "influx": "^5.0.7",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "main": "run.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "",
+  "description": ""
+}
