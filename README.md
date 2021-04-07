@@ -1,4 +1,6 @@
 # morningstar
+Code for pulling data from a Morningstar solar controller (not sure the model).
+
 Set up like this
 ```
 npm install xmlhttprequest
